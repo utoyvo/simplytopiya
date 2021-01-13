@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<title>VRLand # DEMO :)</title>
+	<meta name="description" content="Сozy place for me and friends">
+	<meta name="keywords" content="vrland, vr, vr chat, aframe, utoyvo, demo">
+
+	<!-- open graph protocol -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://utoyvo.github.io/vrland">
+	<meta property="og:site_name" content="VRLand">
+	<meta property="og:title" content="VRLand">
+	<meta property="og:description" content="Сozy place for me and friends">
+	<meta property="og:image" content="https://utoyvo.github.io/vrland/public/assets/img/screenshot.jpg">
+	<meta property="og:image:alt" content="VRLand">
+	<meta property="og:image:width" content="1280">
+	<meta property="og:image:height" content="640">
+	<meta property="og:locale" content="en-US">
+	<!-- google -->
+	<meta itemprop="url" content="https://utoyvo.github.io/vrland">
+	<meta itemprop="name" content="VRLand">
+	<meta itemprop="description" content="Сozy place for me and friends">
+	<meta itemprop="image" content="https://utoyvo.github.io/vrland/public/assets/img/screenshot.jpg">
+
+	<!-- icons -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!-- aframe -->
+	<script src="https://utoyvo.github.io/vrland/public/assets/libs/aframe/0.7.0/aframe.min.js"></script>
+	<!-- aframe components -->
+	<script src="https://utoyvo.github.io/vrland/public/assets/libs/aframe/components/aframe-sharedspace-component/aframe-sharedspace-component.min.js"></script>
+	<script src="https://utoyvo.github.io/vrland/public/assets/libs/aframe/components/aframe-environment-component/aframe-environment-component.min.js"></script>
+	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+
+	<!-- google analytics --
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSP0DKLZJ8"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LSP0DKLZJ8');</script>-->
+</head>
+
+<body>
+
+<a-scene>
+	<!-- Avatar -->
+	<a-entity sharedspace="hold:true; audio:true"
+			  avatars="onmyself:user"></a-entity>
+	<a-mixin id="user"
+			 visible="false"
+			 look-controls
+			 wasd-controls="enabled:true; fly:true; acceleration:64; easing:8"
+			 share="position, rotation"></a-mixin>
+
+	<!-- Environment -->
+	<a-entity environment="preset:forest"></a-entity>
+</a-scene>
+
+<template>
+	<a-sphere radius="0.8" material="src:url(https://utoyvo.github.io/vrland/public/assets/img/avatar.jpg)" color="#ff0"></a-sphere>
+</template>
+
+<!-- scripts -->
+<script src="https://utoyvo.github.io/vrland/public/assets/js/app.js"></script>
+
+</body></html>
