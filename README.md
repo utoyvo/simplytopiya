@@ -1,7 +1,7 @@
-# VRLand
+# Simplytopiya 
 Сozy place for me and friends.
 
-![VRLand](assets/img/screenshot.jpg)
+![simplytopiya](public/assets/img/screenshot.jpg)
 
 ## STRUCTURE
 
